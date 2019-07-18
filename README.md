@@ -1,6 +1,6 @@
 # DeepLearningFrameworks
 Demo of running NNs across different frameworks on Windows with CPU .   
-1. 对比resnet18和resnet50在不同的深度学习框架上推理速度， 模型也可以换成其他的此项目仅以resnet18和resnet50为例。     
+1. 对比resnet18和resnet50在不同的深度学习框架上推理速度， 测试模型也可以换成其他的，此项目只是以resnet18和resnet50为例。     
 2. 本项目只关注inference的速度，当然也可以在GPU上跑。但是要来考虑到并不是所有的应用商都想花大价钱买GPU或者服务器，所以
 模型在cpu上就可以很好的运行的话，更容易卖给客户。  
 
@@ -33,8 +33,9 @@ OnnxRunTime Version: 0.4.0
 
  
 ## 实验结果
+（代码运行的结果会包含bs==[1, 2, 4, 8]的情况，不同的bs各个框架的速度变化也不一样，感兴趣的同学可以去看结果文件，他会和cpu的cores数量有一定关系，这里只列出了 batch size == 1的结果。）    
 单位：fps  
-batch size: 1  
+batch size: 1    
 
 | DL Library             | resnet50           | resnet18           |
 | ---------------------- | :----------------: | :----------------: |
