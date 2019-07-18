@@ -9,7 +9,7 @@ import time
 import torch
 import pandas as pd
 import torchvision.models as models
-from utils import give_fake_data
+from utils import give_fake_data, ITER_NUMS
 from tqdm import tqdm
 
 
@@ -28,7 +28,7 @@ class ModelSpeed(object):
         with torch.no_grad():
             sum_time = 0
             sum_num = 0
-            for idx in range(50):
+            for idx in range(ITER_NUMS):
                 #keep t_start, model_inference, t_end procedure synchronize
                 if self.cuda_is_available:
                     torch.cuda.synchronize()
@@ -38,11 +38,10 @@ class ModelSpeed(object):
                     torch.cuda.synchronize()
                 t_end = time.time()
                 
-                if idx > 0:
+                if idx >= 5:
                     sum_time += t_end - t_start
                     sum_num += 1
-                if idx == 40:
-                    break       
+    
             # experiment logs
             bs_time = sum_time / sum_num
             fps = (1 / bs_time) * data.shape[0]

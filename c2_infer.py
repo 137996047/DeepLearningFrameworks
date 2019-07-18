@@ -11,7 +11,7 @@ import os.path as osp
 from caffe2.proto import caffe2_pb2
 from caffe2.python import core, workspace, models
 from tqdm import tqdm
-from utils import give_fake_data
+from utils import give_fake_data, ITER_NUMS
 
 
 class ModelSpeed(object):
@@ -37,16 +37,15 @@ class ModelSpeed(object):
         sum_time = 0
         sum_num = 0
         workspace.FeedBlob("data", data, device_option=self.device_opts)
-        for idx in range(100):
+        for idx in range(ITER_NUMS):
             t_start = time.time()
             workspace.RunNet(self.net_name, 1)
             t_end = time.time()
             
-            if idx > 0:
+            if idx >= 5:
                 sum_time += t_end - t_start
                 sum_num += 1
-            if idx == 60:
-                break       
+     
         # experiment logs
         bs_time = sum_time / sum_num
         fps = (1 / bs_time) * data.shape[0]
