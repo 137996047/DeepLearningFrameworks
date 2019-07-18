@@ -15,12 +15,12 @@ onnxruntime version: 0.4.0
 
 ## 安装步骤
 1. 安装anaconda。
-2. 创建一个新的环境`conda create -n df python=3.6.7`, 并激活环境。
+2. 创建一个新的环境`conda create -n dlf python=3.6.7`, 并激活环境`conda activate dlf`。
 3. 安装numpy`conda install numpy=1.16.4`
-4. 安装pytorch:`conda install pytorch=1.1.0`
+4. 安装pytorch:`conda install pytorch-cpu torchvision-cpu -c pytorch`
 5. 安装caffe2: 安装好pytorch之后会自带caffe2，但是要成功执行的话还需要安装一些依赖包，根据出错提示google一下就行。
 6. 安装tensorflow: `conda install tensorflow=1.9.0`
-7. 安装onnxruntime: `conda install onnxruntime=0.4.0`(如果要框架支持MKLDNN 或者 Ngraph加速器的话需要从源码安装：https://github.com/microsoft/onnxruntime/blob/master/BUILD.md)
+7. 安装onnxruntime: `pip install onnxruntime==0.4.0`(如果要框架支持MKLDNN 或者 Ngraph加速器的话需要从源码安装：https://github.com/microsoft/onnxruntime/blob/master/BUILD.md)
 8. 还需执行一下： `conda install pandas tqdm`
 
 ## 执行步骤
@@ -43,7 +43,5 @@ batch size: 1
 
 备注：  
 1.TensorFlow 和 Caffe2 的官方的预训练模型没有找到。  
-2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：    
-[Pytorch](https://github.com/pytorch/pytorch/issues/22962)  
-[TensorFlow](https://www.tensorflow.org/guide/performance/overview)
+2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：[Pytorch](https://github.com/pytorch/pytorch/issues/22962 [TensorFlow](https://www.tensorflow.org/guide/performance/overview)
 
