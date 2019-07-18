@@ -1,0 +1,5 @@
+model_name,bs,bs_time,fps
+"('resnet50_init_net.pb', 'resnet50_predict_net.pb')",1,0.06858271757761637,14.580932854815513
+"('resnet50_init_net.pb', 'resnet50_predict_net.pb')",2,0.13394015232721965,14.932042149048348
+"('resnet50_init_net.pb', 'resnet50_predict_net.pb')",4,0.26559322675069175,15.06062503527147
+"('resnet50_init_net.pb', 'resnet50_predict_net.pb')",8,0.5308444817860921,15.070327138153546
