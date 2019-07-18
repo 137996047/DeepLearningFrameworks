@@ -2,7 +2,7 @@
 """
 Created on Thu Jul 11 20:36:13 2019
 
-@author: v-hadong
+@author: WaterWood
 """
 
 import sys
@@ -18,7 +18,6 @@ ITER_NUMS = 25
 
 def give_fake_data(batch_size):
     """ Create an array of fake data to run inference on"""
-    
     np.random.seed(10)
     data = np.random.rand(batch_size, 224, 224, 3).astype(np.float32)
     return data, np.swapaxes(data, 1, 3)
