@@ -1,6 +1,8 @@
 # DeepLearningFrameworks
 Demo of running NNs across different frameworks on Windows with CPU .   
-对比resnet18和resnet50在不同的深度学习框架上推理速度。
+1. 对比resnet18和resnet50在不同的深度学习框架上推理速度， 模型也可以换成其他的此项目仅以resnet18和resnet50为例。     
+2. 本项目只关注inference的速度，当然也可以在GPU上跑。但是要来考虑到并不是所有的应用商都想花大价钱买GPU或者服务器，所以
+模型在cpu上就可以很好的运行的话，更容易卖给客户。  
 
 ## 实验环境
 系统： Windows 10
