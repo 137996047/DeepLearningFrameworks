@@ -41,7 +41,14 @@ batch size: 1
 | Onnxruntime + mkldnn   |        25.4        |         71.6       |
 | Onnxruntime + ngraph   |        36.1        |         89.8       |
 
+结论：  
+可以看出 Onnxruntime这个框架即使没有使用mkldnn加速的时候，也会比其他框架快很多，而且其他几个框架的模型都可以转成ONNX的格式。     
 备注：  
 1.TensorFlow 和 Caffe2 的官方resnet18的预训练模型没有找到。  
 2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：[Pytorch](https://github.com/pytorch/pytorch/issues/22962) [TensorFlow](https://www.tensorflow.org/guide/performance/overview)
 
+## 其他资料链接
+1. TensorFlow + mkldnn: https://www.anaconda.com/tensorflow-in-anaconda/    
+2. ONNX github： https://github.com/onnx/onnx  
+3. onnxruntime github：https://github.com/microsoft/onnxruntime  
+4. PyTorch github: https://github.com/pytorch/pytorch  
