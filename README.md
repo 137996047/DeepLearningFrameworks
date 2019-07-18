@@ -1,8 +1,8 @@
 # DeepLearningFrameworks
 Demo of running NNs across different frameworks on Windows with CPU .   
-1. 对比resnet18和resnet50在不同的深度学习框架上推理速度， 测试模型也可以换成其他的，此项目只是以resnet18和resnet50为例。     
-2. 本项目只关注inference的速度，当然也可以在GPU上跑。但是要来考虑到并不是所有的应用商都想花大价钱买GPU或者服务器，所以
-模型在cpu上就可以很好的运行的话，更容易卖给客户。  
+1. 对比resnet18和resnet50在不同的深度学习框架上推理速度， 测试模型也可以换成其他的，这里只是以resnet18和resnet50为例。     
+2. 本项目只测了模型在cpu上的inference的速度，当然也可以在GPU上跑。但如果是面向应用的，并不是所有的应用商都想花钱买GPU，尤其是对普通人，所以
+模型在cpu上就可以很好的运行的话，更容易卖给客户和推广产品。  
 
 ## 实验环境
 系统： Windows 10
@@ -63,4 +63,4 @@ If you build PyTorch with MKLDNN [enabled](https://github.com/pytorch/pytorch/bl
 6. 参考的GitHub项目：https://github.com/ilkarman/DeepLearningFrameworks
 
 ## 感想
-在公司里我们经常会遇到一个组里面几个人喜欢用不同的框架，或者刚来的实习生特别喜欢用某一个深度学习框架但和组内已经在线上跑的模型不是一个框架，这样就导致还要去花时间去学习其他的框架，不然的话合作效率会特别低。这时候推荐大家去用onnxruntime在线上进行模型部署，onnxruntime只是关注模型inference的过程而且包含了很多加速优化。重点是其他的框架都可以转换成ONNX的格式，这就解决了大家用不同的框架很难合作的问题。
+在公司里我们经常会遇到一个组里面几个人喜欢用不同的框架，或者实习生特别喜欢用某一个深度学习框架但和组内实际生产中用的框架不一样，这样就要花时间去学习其他的框架，合作效率会变低。推荐大家用onnxruntime在线上进行模型部署，onnxruntime关注模型inference的过程包含了很多加速优化。重点是其他的框架都可以转换成ONNX的格式，这就解决了大家用不同的框架难合作的问题。
