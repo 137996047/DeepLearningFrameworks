@@ -60,6 +60,7 @@ batch size: 1
 4. PyTorch github: https://github.com/pytorch/pytorch  
 5. PyTorch 如何使用MKLDNN 加速：   
 If you build PyTorch with MKLDNN [enabled](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/setup.py#L45), you can then create MKLDNN tensors by `tensor.to_mkldnn()`. And, operations like [linear](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/aten/src/ATen/native/Linear.cpp#L15) would automatically use mkldnn.
+6. 参考的GitHub项目：https://github.com/ilkarman/DeepLearningFrameworks
 
 ## 感想
 在公司里我们经常会遇到一个组里面几个人喜欢用不同的框架，或者刚来的实习生特别喜欢用某一个深度学习框架但和组内已经在线上跑的模型不是一个框架，这样就导致还要去花时间去学习其他的框架，不然的话合作效率会特别低。这时候推荐大家去用onnxruntime在线上进行模型部署，onnxruntime只是关注模型inference的过程而且包含了很多加速优化。重点是其他的框架都可以转换成ONNX的格式，这就解决了大家用不同的框架很难合作的问题。
