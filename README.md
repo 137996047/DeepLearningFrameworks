@@ -47,8 +47,9 @@ batch size: 1
 1.TensorFlow 和 Caffe2 的官方resnet18的预训练模型没有找到。  
 2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：[Pytorch](https://github.com/pytorch/pytorch/issues/22962) [TensorFlow](https://www.tensorflow.org/guide/performance/overview)
 
-## 其他资料链接
-1. TensorFlow + mkldnn: https://www.anaconda.com/tensorflow-in-anaconda/    
-2. ONNX github： https://github.com/onnx/onnx  
+## 其他资料
+1. TensorFlow + MKLDNN 速度对比实验: https://www.anaconda.com/tensorflow-in-anaconda/    
+2. ONNX github介绍： https://github.com/onnx/onnx  
 3. onnxruntime github：https://github.com/microsoft/onnxruntime  
 4. PyTorch github: https://github.com/pytorch/pytorch  
+5. PyTorch 如何使用MKLDNN 加速： If you build PyTorch with MKLDNN [enabled](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/setup.py#L45), you can then create MKLDNN tensors by `tensor.to_mkldnn()`. And, operations like [linear](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/aten/src/ATen/native/Linear.cpp#L15) would automatically use mkldnn.
