@@ -28,12 +28,12 @@ OnnxRunTime Version: 0.4.0
 8. 还需执行一下： `conda install pandas tqdm`
 
 ## 执行步骤
- 1. 先将预训练模型下载到`./models/`中对应的文件下，下载地址在对应文件中有给出。（不用下载pytorch的预训练模型，具体的可以看pytorch_infer.py里面的代码。） 
- 2. 执行对应的`*_infer.py`的文件即可在`./result/`文件夹中生成对应的实验结果。
+ 1. 先将预训练模型下载到`./models/`中对应的文件下，下载地址在对应文件夹的readme中有给出。（不用下载pytorch, keras的预训练模型，具体可以看代码。） 
+ 2. 执行对应的`*_infer.py`的文件即可在`./result/`文件夹中生成实验结果。
 
  
 ## 实验结果
-（代码运行的结果会包含bs==[1, 2, 4, 8]的情况，不同的bs各个框架的速度变化也不一样，感兴趣的同学可以去看结果文件，他会和cpu的cores数量有一定关系，这里只列出了 batch size == 1的结果。）    
+（代码运行的结果会包含bs==1, 2, 4, 8的情况，不同的bs速度也不一样，会和cpu的cores数量有一定关系，这里只列出了 batch size == 1的结果。）    
 单位：fps  
 batch size: 1    
 
@@ -60,3 +60,6 @@ batch size: 1
 4. PyTorch github: https://github.com/pytorch/pytorch  
 5. PyTorch 如何使用MKLDNN 加速：   
 If you build PyTorch with MKLDNN [enabled](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/setup.py#L45), you can then create MKLDNN tensors by `tensor.to_mkldnn()`. And, operations like [linear](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/aten/src/ATen/native/Linear.cpp#L15) would automatically use mkldnn.
+
+## 感想
+在公司里我们经常会遇到一个组里面几个人喜欢用不同的框架，或者刚来的实习生特别喜欢用某一个深度学习框架但和组内已经在线上跑的模型不是一个框架，这样就导致还要去花时间去学习其他的框架，不然的话合作效率会特别低。这时候推荐大家去用onnxruntime在线上进行模型部署，onnxruntime只是关注inference的过程而且包含了很多加速优化。重点是其他的框架都可以转换成ONNX的格式，这就解决了大家用不同的框架很难合作的问题。
