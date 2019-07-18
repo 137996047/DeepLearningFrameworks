@@ -1,5 +1,5 @@
 # DeepLearningFrameworks
-The inference speed of different depth learning frameworks on CPU is compared.   
+Demo of running NNs across different frameworks on Windows with CPU .   
 对比resnet18和resnet50在不同的深度学习框架上推理速度。
 
 ## 实验环境
