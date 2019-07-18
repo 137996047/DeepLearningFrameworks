@@ -1,6 +1,6 @@
 # DeepLearningFrameworks
 The inference speed of different depth learning frameworks on CPU is compared.   
-resnet18和resnet50在不同的深度学习框架上推理速度比较。
+对比resnet18和resnet50在不同的深度学习框架上推理速度。
 
 ## 实验环境
 系统： Windows 10
