@@ -9,7 +9,8 @@ Python:  3.6.7 (default, Jul  2 2019, 02:21:41) [MSC v.1900 64 bit (AMD64)]
 Numpy:  1.16.4  
 PyTorch Version: 1.1.0  
 Caffe2 Version: 1.1.0  
-Tensorflow Version: 1.9.0  
+Tensorflow Version: 1.9.0
+Keras Version: 2.2.4
 OnnxRunTime Version: 0.4.0  
 
 
@@ -21,6 +22,7 @@ OnnxRunTime Version: 0.4.0
 5. 安装caffe2: 安装好pytorch之后会自带caffe2，但是要成功执行的话还需要安装一些依赖包，根据出错提示google一下就行。
 6. 安装tensorflow: `conda install tensorflow=1.9.0`
 7. 安装onnxruntime: `pip install onnxruntime==0.4.0`(如果要框架支持MKLDNN 或者 Ngraph加速器的话需要从源码安装：https://github.com/microsoft/onnxruntime/blob/master/BUILD.md)
+8. 安装keras: `conda install keras=2.2.4`
 8. 还需执行一下： `conda install pandas tqdm`
 
 ## 执行步骤
@@ -34,6 +36,7 @@ batch size: 1
 
 | DL Library             | resnet50           | resnet18           |
 | ---------------------- | :----------------: | :----------------: |
+| Keras                  |        2.2         |         -          |
 | TensorFlow             |        3.9         |         -          |
 | PyTorch                |        5.7         |         11.3       |
 | Caffe2                 |        14.6        |         -          |
@@ -44,7 +47,7 @@ batch size: 1
 结论：  
 可以看出 Onnxruntime这个框架即使没有使用mkldnn加速的时候，也会比其他框架快很多，而且其他几个框架的模型都可以转成ONNX的格式。     
 备注：  
-1.TensorFlow 和 Caffe2 的官方resnet18的预训练模型没有找到。  
+1.TensorFlow, Keras 和 Caffe2 的官方resnet18的预训练模型没有找到。  
 2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：[Pytorch](https://github.com/pytorch/pytorch/issues/22962) [TensorFlow](https://www.tensorflow.org/guide/performance/overview)
 
 ## 其他资料
