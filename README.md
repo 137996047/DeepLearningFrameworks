@@ -7,10 +7,10 @@ The inference speed of different depth learning frameworks on CPU is compared.
 处理器： Intel(R) Core(TM) i7-7700 CPU @ 3.6GHz 3.60GHz    
 Python:  3.6.7 (default, Jul  2 2019, 02:21:41) [MSC v.1900 64 bit (AMD64)]  
 Numpy:  1.16.4  
-pytorch version: 1.1.0  
-caffe2 version: 1.1.0  
-tensorflow version: 1.9.0  
-onnxruntime version: 0.4.0  
+PyTorch Version: 1.1.0  
+Caffe2 Version: 1.1.0  
+Tensorflow Version: 1.9.0  
+OnnxRunTime Version: 0.4.0  
 
 
 ## 安装步骤
@@ -52,4 +52,5 @@ batch size: 1
 2. ONNX github介绍： https://github.com/onnx/onnx  
 3. onnxruntime github：https://github.com/microsoft/onnxruntime  
 4. PyTorch github: https://github.com/pytorch/pytorch  
-5. PyTorch 如何使用MKLDNN 加速： If you build PyTorch with MKLDNN [enabled](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/setup.py#L45), you can then create MKLDNN tensors by `tensor.to_mkldnn()`. And, operations like [linear](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/aten/src/ATen/native/Linear.cpp#L15) would automatically use mkldnn.
+5. PyTorch 如何使用MKLDNN 加速：   
+If you build PyTorch with MKLDNN [enabled](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/setup.py#L45), you can then create MKLDNN tensors by `tensor.to_mkldnn()`. And, operations like [linear](https://github.com/pytorch/pytorch/blob/0408697317de6146ed9e5445faaeab49828310b1/aten/src/ATen/native/Linear.cpp#L15) would automatically use mkldnn.
