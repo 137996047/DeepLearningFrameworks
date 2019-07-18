@@ -42,6 +42,6 @@ batch size: 1
 | Onnxruntime + ngraph   |        36.1        |         89.8       |
 
 备注：  
-1.TensorFlow 和 Caffe2 的官方的预训练模型没有找到。  
-2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：[Pytorch](https://github.com/pytorch/pytorch/issues/22962 [TensorFlow](https://www.tensorflow.org/guide/performance/overview)
+1.TensorFlow 和 Caffe2 的官方resnet18的预训练模型没有找到。  
+2.PyTorch 和 TensorFlow 目前还不支持在在Windows中使用MKLDNN加速,具体原因：[Pytorch](https://github.com/pytorch/pytorch/issues/22962) [TensorFlow](https://www.tensorflow.org/guide/performance/overview)
 
